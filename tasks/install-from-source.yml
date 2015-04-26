@@ -1,0 +1,32 @@
+# Install git from source.
+---
+
+- include_vars: RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure dependency packages for compilation are installed (RedHat)
+  yum:
+    pkg: "{{ item.package }}"
+    state: installed
+  with_items: git_packages_source_install
+  when: ansible_os_family == 'RedHat'
+
+- name: Download git source package
+  get_url:
+    url: "{{ git_source_install_mirror_url_packages }}/{{ git_source_install_package_filename }}"
+    dest: "{{ remote_ansible_data_path }}/{{ git_source_install_package_filename }}"
+
+- name: Install git
+  unarchive:
+    src: "{{ remote_ansible_data_path }}/{{ git_source_install_package_filename }}"
+    dest: "{{ remote_ansible_data_path }}"
+    copy: false
+    creates: "{{ remote_ansible_data_path }}/git-{{ git_source_install_version }}"
+
+- name: Build git from source
+  command: >
+    make prefix={{ git_source_install_path }} {{ item }}
+    chdir={{ remote_ansible_data_path }}/git-{{ git_source_install_version }}
+  with_items:
+    - all
+    - install

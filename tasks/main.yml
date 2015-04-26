@@ -1,0 +1,13 @@
+# Installs and configures git
+---
+
+- include: install-RedHat.yml
+  when: git_install_from_source == false and ansible_os_family == 'RedHat'
+
+- include: install-Darwin.yml
+  when: ansible_os_family == 'Darwin'
+
+- include: install-from-source.yml
+  when: git_install_from_source == true
+
+- include: configure.yml

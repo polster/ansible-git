@@ -1,0 +1,8 @@
+# Darwin OS family specific install tasks.
+---
+
+- name: Ensure git is installed (Darwin)
+  homebrew:
+    name: "{{ item.package }}"
+    state: present
+  with_items: git_packages

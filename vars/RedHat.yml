@@ -1,0 +1,12 @@
+# Variables that shall not be overridden.
+---
+
+# List of required OS packages for the git installation from source
+git_packages_source_install:
+  - { package: "gettext-devel" }
+  - { package: "expat-devel" }
+  - { package: "curl-devel" }
+  - { package: "zlib-devel" }
+  - { package: "perl-devel" }
+  - { package: "openssl-devel" }
+  - { package: "subversion-perl" }

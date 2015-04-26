@@ -1,0 +1,7 @@
+# Configures git.
+---
+
+- name: Use https instread of git proto
+  command: "git config --global url.'https://'.insteadOf git://"
+  when: git_use_https_for_git_proto == true
+  sudo: no

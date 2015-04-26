@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Simon Dietschi
+  description: Git role for Ansible
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 6
+    - name: OSX
+      versions:
+        - 10.10
+  categories:
+    - development
+dependencies: []

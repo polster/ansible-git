@@ -1,0 +1,8 @@
+# RedHat OS family specific install tasks.
+---
+
+- name: Ensure git is installed (RedHat)
+  yum:
+    name: "{{ item.package }}"
+    state: installed
+  with_items: git_packages

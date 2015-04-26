@@ -1,0 +1,14 @@
+---
+
+# The installation path for git if installed from source
+git_source_install_path: "/usr"
+
+# The file name of the Git source package
+git_source_install_package_filename: "git-{{ git_source_install_version }}.tar.gz"
+
+# Remote path to store temporary data
+remote_ansible_data_path: "/usr/local/src/ansible/data"
+
+# Git related packages to be installed
+git_packages:
+  - { package: "git" }

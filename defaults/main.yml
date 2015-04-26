@@ -1,0 +1,15 @@
+# Default varaibles, may be overridden by depending roles.
+---
+
+# The URL to the Git source packages
+git_source_install_mirror_url_packages: "https://www.kernel.org/pub/software/scm/git"
+
+# The git version to be installed if installing from source
+git_source_install_version: "2.3.5"
+
+# Install git from source
+git_install_from_source: false
+
+# Configure git to use https instead of git protocol
+# May be useful if some firewalls in between block the git protocol port (9418)
+git_use_https_for_git_proto: false
