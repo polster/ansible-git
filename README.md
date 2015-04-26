@@ -6,8 +6,9 @@ This [Ansible](http://www.ansible.com/home) role installs and configures [Git](h
 ## Prerequisites
 
 * Add the role to the project's Ansible galaxy requirements file and install it via the ansible-galaxy command
+* Use one of the Git tag versions if you want to stick to a certain version of this role (stable versus head)
 
-## Supported Plattforms
+## Supported Platform
 
 * CentOS 6
 * CentOS 7
@@ -18,12 +19,12 @@ This [Ansible](http://www.ansible.com/home) role installs and configures [Git](h
 * Add the following line to your Ansible's playbook role section if you want to use the Git role with its defaults:
 ```
 roles:
-    - git
+    - ansible-git
 ```
 * If you want to pass custom values for the available variables, add something similar to the line below:
 ```
 roles:
-    - { role: git, git_install_from_source: true, git_source_install_version: "2.3.5" }
+    - { role: ansible-git, git_install_from_source: true, git_source_install_version: "2.3.5" }
 ```
 
 ## Configuration
