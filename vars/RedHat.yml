@@ -10,3 +10,4 @@ git_packages_source_install:
   - { package: "perl-devel" }
   - { package: "openssl-devel" }
   - { package: "subversion-perl" }
+  - { package: "gcc" }
