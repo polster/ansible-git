@@ -13,3 +13,6 @@ git_install_from_source: false
 # Configure git to use https instead of git protocol
 # May be useful if some firewalls in between block the git protocol port (9418)
 git_use_https_for_git_proto: false
+
+# Enable or disable SSL certificate check
+git_disable_ssl_cert_check: false

@@ -37,3 +37,4 @@ roles:
 | git_install_from_source | Flag to enable a git installation from source. This may be a good alternative if the git package being shipped with the OS distro is outdated. | false | No |
 | git_source_install_version | Used to specify the exact Git version to be installed from source | 2.3.5 | No |
 | git_use_https_for_git_proto | Force git to use https instread of the git protocol. This may be useful in case there are blocking firewalls in between. | false | No |
+| git_disable_ssl_cert_check | Disable SSL cert check. This may be useful if working with self-signed certs (for safety reasons not recommended) | false | No |

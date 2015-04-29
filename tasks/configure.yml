@@ -5,3 +5,13 @@
   command: "git config --global url.'https://'.insteadOf git://"
   when: git_use_https_for_git_proto == true
   sudo: no
+
+- name: Make sure SSL cert check is disabled
+  command: "git config --global http.sslVerify false"
+  when: git_disable_ssl_cert_check == true
+  sudo: no
+
+- name: Make sure SSL cert check is enabled
+  command: "git config --global http.sslVerify true"
+  when: git_disable_ssl_cert_check == false
+  sudo: no
