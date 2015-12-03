@@ -7,7 +7,7 @@ git_source_install_path: "/usr"
 git_source_install_package_filename: "git-{{ git_source_install_version }}.tar.gz"
 
 # Remote path to store temporary data
-remote_ansible_data_path: "/usr/local/src/ansible/data"
+remote_ansible_data_path: "/tmp"
 
 # Git related packages to be installed
 git_packages:
